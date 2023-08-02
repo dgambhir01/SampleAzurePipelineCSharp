@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+    <!-- Adapter Specific sections -->
+    <NUnit>
+        <DefaultTestNamePattern>{m}({0})</DefaultTestNamePattern>
+    </NUnit>
+</RunSettings>

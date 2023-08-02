@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <PublishChromeDriver>true</PublishChromeDriver>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Compile Remove="Drivers\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="Drivers\**" />
+    <None Remove="Data\**" />
+    <None Remove="Drivers\**" />
+    <SpecFlowFeatureFiles Remove="Data\**" />
+    <SpecFlowFeatureFiles Remove="Drivers\**" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Data\**" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Drivers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="TestProject\ExampleSite\Features\LoginHB - Copy.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BrowserStack" Version="2.0.1" />
+    <PackageReference Include="BrowserStackLocal" Version="2.0.0" />
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="ExtentReports" Version="4.1.0" />
+    <PackageReference Include="Eyes.Selenium" Version="2.49.0" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
+    <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="17.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NPOI" Version="2.5.4" />
+    <PackageReference Include="ReportPortal.SpecFlow" Version="3.2.0" />
+    <PackageReference Include="RestSharp" Version="106.11.7" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="111.0.5563.6400" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.30.0.1" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.8.35" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.8.7" />
+    <PackageReference Include="nunit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="System.Xml.XPath" Version="4.3.0" />
+    <PackageReference Include="WebDriverManager" Version="2.12.1" />
+    <PackageReference Include="XPath2" Version="1.1.2" />
+    <Content Remove="D:\Test-Automation-master\Test-Automation-master\AutomationFramework\bin\Debug\net48\\geckodriver.exe" />
+    <Content Remove="D:\Test-Automation-master\Test-Automation-master\AutomationFramework\bin\Debug\net48\\geckodriver.exe" />
+    <Content Remove="D:\Test-Automation-master\Test-Automation-master\AutomationFramework\bin\Debug\net48\\geckodriver.exe" />
+    <Content Remove="D:\Test-Automation-master\Test-Automation-master\AutomationFramework\bin\Debug\net48\\geckodriver.exe" />
+    <Content Include="$(TargetDir)\geckodriver.exe" CopyToPublishDirectory="Always">
+      <Link>geckodriver.exe</Link>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Chrome\" />
+    <Folder Include="Results\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update=".runsettings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ReportPortal.config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
